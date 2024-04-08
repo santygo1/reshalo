@@ -1,0 +1,12 @@
+spring:
+  sql:
+    init:
+      mode: always # Включаем сценарий заполнения
+  jpa:
+    defer-datasource-initialization: true # Сначала создается схема после чего запускается data.sql
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: 'jdbc:postgresql://localhost:5432/reshalo'
+    username: 'reshalo'
+    password: '1234'

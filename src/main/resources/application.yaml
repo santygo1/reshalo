@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: reshalo
+  profiles:
+    active: dev
