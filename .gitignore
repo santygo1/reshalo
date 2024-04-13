@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### profiles
+src/main/resources/application-prod.yaml
+src/main/resources/application-tikhon.yaml

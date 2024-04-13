@@ -1,7 +1,7 @@
 package ru.danilkaspirin.reshalo.domain;
 
-import java.util.Optional;
+import java.util.List;
 
 public interface Solver {
-    Optional<Repair> repair(Detail detail);
+    List<Breakage> determineBreakages(Entity entity);
 }
