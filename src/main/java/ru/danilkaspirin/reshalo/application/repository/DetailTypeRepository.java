@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import ru.danilkaspirin.reshalo.application.models.DetailTypeModel;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -16,4 +17,7 @@ public interface DetailTypeRepository extends JpaRepository<DetailTypeModel, Lon
             "left join fetch t.characteristics ")
     Optional<DetailTypeModel> findByTypeDef(String typeDef);
 
+
+    @Query("select distinct t.typeDef from DetailTypeModel t")
+    List<DetailTypeModel> findAllDefs();
 }

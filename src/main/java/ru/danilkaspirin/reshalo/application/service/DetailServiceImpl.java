@@ -101,7 +101,7 @@ public class DetailServiceImpl implements DetailService {
         if (detail == null)
             throw new RuntimeException("Не определена деталь");
 
-        DetailTypeModel detailTypeModel = detailTypeService.getDetailType(detail.getDetailType());
+        DetailTypeModel detailTypeModel = detailTypeService.getDetailTypeModel(detail.getDetailType());
         log.debug("Проверка соответствия детали {} типу {}", detail, detail.getDetailType());
 
         checkCharacteristics(detail, detailTypeModel);
