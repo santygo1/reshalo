@@ -40,7 +40,7 @@ public class DetailTypeServiceImpl implements DetailTypeService {
 
     @Override
     public List<String> getAllDefs() {
-        return null;
+        return detailTypeRepository.findAllDefs();
     }
 
 }

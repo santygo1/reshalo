@@ -19,5 +19,5 @@ public interface DetailTypeRepository extends JpaRepository<DetailTypeModel, Lon
 
 
     @Query("select distinct t.typeDef from DetailTypeModel t")
-    List<DetailTypeModel> findAllDefs();
+    List<String> findAllDefs();
 }
