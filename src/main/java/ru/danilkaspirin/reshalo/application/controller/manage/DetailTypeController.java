@@ -1,5 +1,6 @@
 package ru.danilkaspirin.reshalo.application.controller.manage;
 
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/manage/detailTypes")
 @RequiredArgsConstructor
-@FieldDefaults()
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class DetailTypeController {
 
     DetailTypeService service;
