@@ -30,7 +30,7 @@ public class DetailTypeController {
         return ResponseEntity.ok(typeDefs);
     }
 
-    @GetMapping("/{detailTypeDef}")
+    @GetMapping("/allDefs/{detailTypeDef}")
     ResponseEntity<DetailTypeResponse> getDetailTypeInfo(@PathVariable String detailTypeDef){
         DetailTypeResponse detailTypeResponse = converter.toResponse(service.getDetailTypeDto(detailTypeDef));
         return ResponseEntity.ok(detailTypeResponse);
